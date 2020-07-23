@@ -84,10 +84,13 @@
       const itemIncrementBtn = document.getElementById("itemIncrement");
       itemIncrementBtn.addEventListener("click", function(){
          const currentInputNumber = document.getElementById("input-number").value;
-         const updateInputNumber = parseFloat(currentInputNumber);
+         const updateInputNumber = parseInt(currentInputNumber);
          
-         const addInputNumber = 
-         console.log(updateInputNumber);
+         const addInputNumber = document.getElementById("input-number").value;
+         const putInputNumber = parseInt(addInputNumber);
+         const totalInputNumber = putInputNumber + 1;
+         document.getElementById("input-number").value = totalInputNumber;
+      
       })
    </script>
 </body>
