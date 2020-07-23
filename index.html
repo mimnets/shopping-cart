@@ -91,7 +91,7 @@
          const totalInputNumber = putInputNumber + 1;
          document.getElementById("input-number").value = totalInputNumber;
 
-      // Item $ amount increment event handler
+      // Item $ amount increment
          const itemAmount = document.getElementById("phone-price").innerText;
          const itemCurrentAmount = parseInt(itemAmount);
          const multipliAmount = totalInputNumber * itemCurrentAmount;
@@ -108,6 +108,18 @@
          }else{
             document.getElementById("input-number").value = deleteInputNumber;
          }
+      // Item $ amount increment
+         const abcd = itemAmount; 
+         const decrementItemAmount = document.getElementById("phone-price").innerText;
+         if(currentInputNumber == 1){
+            console.log(abcd);
+         }else{
+            const decementAmount = decrementItemAmount - abcd; 
+         }
+         
+         // const itemDecrementAmount = itemCurrentAmount;  
+         // const multipliAmount = totalInputNumber * itemCurrentAmount;
+         // document.getElementById("phone-price").innerText = multipliAmount;
       })
       
 
