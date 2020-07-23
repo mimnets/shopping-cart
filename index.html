@@ -29,7 +29,7 @@
                            <input id="input-number" type="text" class="form-control text-center" value="1">
                            <button class="btn btn-default"><i id="itemIncrement" class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$1219</h5>
+                        <h5>$<span id="phone-price">1219</span> </h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -90,9 +90,15 @@
          const putInputNumber = parseInt(addInputNumber);
          const totalInputNumber = putInputNumber + 1;
          document.getElementById("input-number").value = totalInputNumber;
+
+      // Item $ amount increment event handler
+         const itemAmount = document.getElementById("phone-price").innerText;
+         const itemCurrentAmount = parseInt(itemAmount);
+         const multipliAmount = totalInputNumber * itemCurrentAmount;
+         document.getElementById("phone-price").innerText = multipliAmount;
       })
 
-      // Item increment button event handler
+      // Item decrement button event handler
       const itemDecrementBtn = document.getElementById("itemDecrement");
       itemDecrementBtn.addEventListener("click", function(){
          currentInputNumber = document.getElementById("input-number").value;
@@ -103,6 +109,9 @@
             document.getElementById("input-number").value = deleteInputNumber;
          }
       })
+      
+
+
    </script>
 </body>
 
