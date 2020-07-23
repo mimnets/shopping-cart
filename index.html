@@ -25,7 +25,7 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <button class="btn btn-default"><i id="itemDecrement" class="fas fa-minus"></i></button>
                            <input id="input-number" type="text" class="form-control text-center" value="1">
                            <button class="btn btn-default"><i id="itemIncrement" class="fas fa-plus"></i></button>
                         </div>
@@ -90,7 +90,18 @@
          const putInputNumber = parseInt(addInputNumber);
          const totalInputNumber = putInputNumber + 1;
          document.getElementById("input-number").value = totalInputNumber;
-      
+      })
+
+      // Item increment button event handler
+      const itemDecrementBtn = document.getElementById("itemDecrement");
+      itemDecrementBtn.addEventListener("click", function(){
+         currentInputNumber = document.getElementById("input-number").value;
+         const deleteInputNumber = currentInputNumber - 1;
+         if(currentInputNumber == 1){
+            currentInputNumber;
+         }else{
+            document.getElementById("input-number").value = deleteInputNumber;
+         }
       })
    </script>
 </body>
